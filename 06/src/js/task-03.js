@@ -20,10 +20,16 @@ const element = images
   .join("");
 galleryListEl.insertAdjacentHTML("afterbegin", element);
 document.body.style.margin = "0px";
-galleryListEl.style.cssText = `display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+document.body.style.display = "flex";
+galleryListEl.style.cssText = `
+@media only screen and (max-width: 768px) {
+  display: flex;
+};
+display: flex;
+felx-direction: column;
+align-items: center;
+justify-content: center;
+list-style-type: none;
+margin: 0;
+padding: 0;
   `;
